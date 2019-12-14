@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- the home page of the app -->
+<html>
+    <head>
+        <title>homepage</title>
+    </head>
+    <body>
+         <!-- link to create page -->
+        <a href="{% url 'assignments:create' %}">create</a>
+        <br>
+         <!-- list of all the models that you can update -->
+        <ul>
+            {% for item in mymodels %}
+            <li><a href="{% url 'assignments:update' item.id %}">{{item}}</a></li>
+            {% endfor %}
+        </ul>
+
+    </body>
+</html>

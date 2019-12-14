@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+ <!-- this is the create page -->
+<html>
+    <head>
+        <title>
+            create
+        </title>
+    </head>
+    <body>
+         <!-- form to create a model in database> -->
+        <form action="{% url 'assignments:create' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <!-- input field for filename -->
+            <input type="text" name="myfilename" placeholder = "filename" required>
+            <br>
+            <!-- input field for file -->
+            <input type="file" name="myfile" required>
+            <br>
+             <!-- submit button -->
+            <input type="submit">
+        </form>
+    </body>
+</html>

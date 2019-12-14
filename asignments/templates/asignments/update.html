@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!-- this is the page to update the content of the file -->
+<html>
+    <head>
+        <title>
+            update
+        </title>
+    </head>
+    <body>
+        <!-- this form is made so that user can edit the content of the file
+        the content of the file will be displayed in the textarea and user can edit it easily -->
+        <form action="{% url 'assignments:update' model.id %}" method="POST">
+            {% csrf_token %}
+            <textarea name="content" cols="30" rows="10" >{{data}}</textarea>
+            <input type="submit">
+        </form>
+    </body>
+</html>
